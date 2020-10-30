@@ -13,7 +13,8 @@ patientsRouter.get('/:id', (req, res) => {
 });
 
 patientsRouter.post('/', (req, res) => {
-  const {id, name, dateOfBirth, ssn, gender, occupation} = req.body;
+  const {name, dateOfBirth, ssn, gender, occupation} = req.body;
+  const id = "random id" //dummy id generator
   try {
     const newPatientEntry = toNewPatientEntry({
       id,
